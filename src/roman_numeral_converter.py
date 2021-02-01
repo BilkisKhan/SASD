@@ -93,3 +93,5 @@ class RomanNumeralConverter(object):
         left = number - numerals[rngFlag]
         leftNumber = self.convert(left)
         return rngFlag + leftNumber
+
+        #print(convert(self, 3))
