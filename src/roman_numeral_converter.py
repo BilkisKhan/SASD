@@ -81,8 +81,8 @@ class RomanNumeralConverter(object):
     # 2nd If block is to
 
     def convert(self,  number):
-        numerals = {"I": 1, "V": 5, "X": 10,
-                    "L": 50, "C": 100, "D": 500, "M": 1000}
+        numerals = {"I": 1, "IV": 4, "V": 5, "VI": 6, "IX": 9, "X": 10, "XL": 40,
+                    "L": 50, "C": 100, "D": 500, "M": 1000, "MM": 2000, "MMM": 3000}
         rngFlag = ""
         for symbol, integer in numerals.items():
             if (integer == number):
@@ -91,6 +91,5 @@ class RomanNumeralConverter(object):
                 rngFlag = symbol
 
         left = number - numerals[rngFlag]
-        # test = convert(left)
         leftNumber = self.convert(left)
         return rngFlag + leftNumber
