@@ -43,7 +43,6 @@ class RomanNumeralConverter(object):
 
 # Result, passed for arabic number 10 after change in function as shown below
 
-
     def convert10(self, number):
         if (number == 10):
             return ('X')
@@ -59,6 +58,7 @@ class RomanNumeralConverter(object):
 # Result : Failed, because It return "IIIIIIIIIIIIIIIIIIII" which is not equal to 'XX' when used above function code..
 # Action: function requires changes to handle arabic number 20, changes added below
 # Result passed,even though code works, but It requires refactor, It has two while loops to handle arabic numbers
+
 
     def convert20(self, number):
         roman_number = ''
@@ -93,5 +93,3 @@ class RomanNumeralConverter(object):
         left = number - numerals[rngFlag]
         leftNumber = self.convert(left)
         return rngFlag + leftNumber
-
-        #print(convert(self, 3))
